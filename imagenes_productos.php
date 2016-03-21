@@ -9,12 +9,8 @@ $ruta = "uploads/"; // Indicar ruta
 	$numero++;
 ?>
 <table id='imgproductos'>
-     <tr>
-	 <br><?php echo ("Imagen: ".$numero ." - ".$file)?></br>
-	 </tr>
-	 <td>
-	 <img src="<?php echo $ruta.$file ?>" width="150px"></img>
-	 </td>
+     <td><?php echo ("Imagen: ".$numero ." - ".$file)?></td>
+	 <tr><img src="<?php echo $ruta.$file ?>" width="150px"></img></tr>
 </table>
 <?php
    } 

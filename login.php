@@ -21,11 +21,11 @@
                             <br></br>
                             <fieldset>
                                 <legend>Login</legend>
-                                <form id="form_login" name="formlogin" method="post" action="logear.php">
+                                <form id="form_login" method="post" action="logear.php">
                                     <table>
                                         <tr>
-                                            <td>Usuario</td>
-                                            <td><input name="user" type="text" id="user" ></input></td>
+										<td>Usuario</td>
+										<td><input name="user" type="text" id="user" ></input></td>
                                         </tr>
                                         <tr>
                                             <td>Contraseña</td>

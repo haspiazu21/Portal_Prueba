@@ -20,7 +20,7 @@
                             <br></br>
                             <fieldset>
                                 <legend>Alta en el servicio</legend>
-                                <form id="form_indice" name="form1" method="post" action="<?= $_SERVER['PHP_SELF'] ?>">
+                                <form id="form_indice" method="post" action="<?= $_SERVER['PHP_SELF'] ?>">
                                     <table>
                                         <tr>
                                             <td>Nombre Cliente</td>
@@ -32,15 +32,16 @@
                                         </tr>
                                         <tr>
                                             <td>Num. Identificacion</td>
-                                            <td><input type="text" name="cli_ruc_dni" id="cli_ruc_dni"></input></td>
+                                            <td><input type="text" name="cli_ruc_dni" id="cli_ruc_dni" value=""></input></td>
                                         </tr>
                                         <tr>
                                             <td>Num. Telefono</td>
-                                            <td><input type="number" name="cli_telefono" id="cli_telefono"></input></td>
+                                            <td><input type="number" name="cli_telefono" id="cli_telefono" value=""></input></td>
                                         </tr>
                                         <tr>
                                             <td>Correo Electronico</td>
-                                            <td><input type="email" name="cli_email" id="cli_email"></input></td>
+                                            <td><input type="email"	name="cli_email" id="cli_email" value=""></input>
+										</td>
                                         </tr>
                                         <tr>
                                             <td><input type="submit" value="Registrar sus datos" name="btn_registrar"></input></td>
