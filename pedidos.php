@@ -1,53 +1,74 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+
 <?php include ("header.php");?>
-</head>
 <body>
-<div id="wrapper">
+	<div id="wrapper">
 	<?php include ("menu.php");?>
-	<!-- end #menu -->
-	<div id="header">
+		<!-- end #menu -->
+		<div id="header">
 		<?php include ("logo_cabecera.php");?>
-	</div>
-	<!-- end #header -->
-	<div id="page">
-	<div id="page-bgtop">
-	<div id="page-bgbtm">
-		<div id="content">
-		<h2>Generar Solicitud de Pedido</h2>
-			<?php include ("iniciar_pedido.php");?>
-			<div style="clear: both;">&nbsp;</div>
 		</div>
-		<!-- end #content -->
-		<div id="sidebar">
-			<ul>
-				<li>
-					<div id="search" >
-					<?php include ("buscador.php");?>
+		<!-- end #header -->
+		<div id="page">
+			<div id="page-bgtop">
+				<div id="page-bgbtm">
+					<div id="content">
+						<h2>Generar Solicitud de Pedido</h2>
+						<?php include ("iniciar_pedido.php");
+
+						$ident_cantidad=array();
+						$ident_cantidad=($_SESSION['identificadores']);
+						
+						$valor=array();
+						foreach ($ident_cantidad as $valor) {
+							$variables1[]=("($('#".$valor."').val())") ;
+								
+						}
+		
+						?>
+
+						<form id="form_solpedet" action="#" method="post">
+							<input name="btn_solicitar" type="button" href="javascript:;"
+								onclick="realizaProceso($('#pro_pedido_2').val(), $('#pro_pedido_3').val());return false;"
+								value="Registrar Pedido"></input> Resultado:
+							<span id="resultado">0</span>
+
+							<input name="btn_solicitar2" type="button" href="javascript:;"
+								onclick="realizaCalculo(<?php echo ($variables1)?>);return false;"
+								value="Registrar Pedido2"></input> Resultado2:<span id="resultado2">0</span>
+						</form>
+						<div style="clear: both;">&nbsp;</div>
 					</div>
+					<!-- end #content -->
+					<div id="sidebar">
+						<ul>
+							<li>
+								<div id="search">
+								<?php include ("buscador.php");?>
+								</div>
+								<div style="clear: both;">&nbsp;</div>
+							</li>
+							<li>
+								<h2>Nuestras Delicias</h2>
+								<p>Ofrecemos la mas alta calidad de sanduches de chancho y pavo,
+									con el sabor mas exquisito de Guayaquil.</p>
+							</li>
+							<li>
+								<h2>Categorias</h2> <?php include ("categorias.php");?> <?php include ("salir.php"); ?>
+							</li>
+
+						</ul>
+					</div>
+					<!-- end #sidebar -->
 					<div style="clear: both;">&nbsp;</div>
-				</li>
-				<li>
-					<h2>Nuestras Delicias</h2>
-					<p>Ofrecemos la mas alta calidad de sanduches de chancho y pavo, con el sabor mas exquisito de Guayaquil.</p>
-				</li>
-				<li>
-					<h2>Categorias</h2>
-					<?php include ("categorias.php");?>
-                    <?php include ("salir.php"); ?>
-				</li>
-				
-			</ul>
+				</div>
+			</div>
 		</div>
-		<!-- end #sidebar -->
-		<div style="clear: both;">&nbsp;</div>
+		<!-- end #page -->
 	</div>
-	</div>
-	</div>
-	<!-- end #page -->
-</div>
 	<?php include ("footer.php");?>
 	<!-- end #footer -->
 </body>

@@ -18,15 +18,15 @@
                     <div id="page-bgbtm">
                         <div id="content">
                             <h2>Detalle de Solicitud de Pedido</h2>
-                            <form id="form_condiciones" name="formcondition" method="post" action="solpe.php">
+                            <form id="form_condiciones" method="post" action="solpe.php">
                                 <table>
                                     <tr>
                                         <td>Fecha de Entrega</td>
-                                        <td><input name="fe_entrega" type="date" id="fe_entrega"></input></td>
+                                        <td><input name="fe_entrega" type="date" id="fe_entrega" value=<?php echo date('Y-m-d')?>></input></td>
                                     </tr>
                                     <tr>
                                         <td>Lugar de Entrega</td>
-                                        <td><select name="lu_entrega" type="select" id="lu_entrega">
+                                        <td><select id="lu_entrega">
                                                 <option selected="selected" value="0">Seleccione...</option>
                                                 <option value="1">Alborada</option>
                                                 <option value="2">Sauces</option>
@@ -37,7 +37,7 @@
                                     </tr>
                                     <tr>
                                         <td>Condicion de Entrega</td>
-                                        <td><select name="cd_entrega" type="select" id="cd_entrega">
+                                        <td><select id="cd_entrega">
                                                 <option selected="selected">Opción 1</option>
                                                 <option>Opción 2</option>
                                                 <option>Opción 3</option>
@@ -47,7 +47,7 @@
                                     </tr>
                                     <tr>
                                         <td>Restricion de Entregas</td>
-                                        <td><select name="re_entrega" type="select" id="re_entrega">
+                                        <td><select id="re_entrega">
                                                 <option>25</option>
                                                 <option>30</option>
                                                 <option>40</option>
