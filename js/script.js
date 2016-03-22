@@ -52,7 +52,7 @@ function initDatepicker() {
     $('.datepicker')
             .attr('readonly', 'readonly')
             .datepicker({
-                dateFormat: 'yy-m-d'
+                dateFormat: 'yy-mm-dd'
             });
 }
 
@@ -119,42 +119,24 @@ function initChangeStatusDialog() {
     });
 }
 
-function realizaProceso(valorCaja1, valorCaja2){
-    var parametros = {
+function realizaProceso(valorCaja1,valorCaja2,valorCaja3,valorCaja4,valorCaja5){
+	
+	var parametros = {
             "pro_pedido_2" : valorCaja1,
-            "pro_pedido_3" : valorCaja2
+            "pro_pedido_3" : valorCaja2,
+            "pro_pedido_4" : valorCaja3,
+            "pro_pedido_5" : valorCaja4,
+            "pro_pedido_6" : valorCaja5,
     };
     $.ajax({
             data:  parametros,
-            url:   'ejemplo_ajax_proceso.php',
+            url:   'ajax_proceso.php',
             type:  'post',
             beforeSend: function () {
                     $("#resultado").html("Procesando, espere por favor...");
             },
             success:  function (response) {
                     $("#resultado").html(response);
-            }
-    });
-}
-
-function realizaCalculo(valoresCantidad){
-    
-	var parametros="";
-	
-		
-	parametros = {
-            "pro_pedido" : valoresCantidad
-            
-    };
-    $.ajax({
-            data:  parametros,
-            url:   'ejemplo_ajax_proceso.php',
-            type:  'post',
-            beforeSend: function () {
-                    $("#resultado2").html("Procesando, espere por favor...");
-            },
-            success:  function (response) {
-                    $("#resultado2").html(response);
             }
     });
 }

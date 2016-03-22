@@ -21,24 +21,19 @@
 
 						$ident_cantidad=array();
 						$ident_cantidad=($_SESSION['identificadores']);
-						
+
 						$valor=array();
 						foreach ($ident_cantidad as $valor) {
 							$variables1[]=("($('#".$valor."').val())") ;
-								
+
 						}
-		
+
 						?>
 
 						<form id="form_solpedet" action="#" method="post">
 							<input name="btn_solicitar" type="button" href="javascript:;"
-								onclick="realizaProceso($('#pro_pedido_2').val(), $('#pro_pedido_3').val());return false;"
-								value="Registrar Pedido"></input> Resultado:
-							<span id="resultado">0</span>
-
-							<input name="btn_solicitar2" type="button" href="javascript:;"
-								onclick="realizaCalculo(<?php echo ($variables1)?>);return false;"
-								value="Registrar Pedido2"></input> Resultado2:<span id="resultado2">0</span>
+								onclick="realizaProceso($('#pro_pedido_2').val(), $('#pro_pedido_3').val(), $('#pro_pedido_4').val(), $('#pro_pedido_5').val(), $('#pro_pedido_6').val());return false;"
+								value="Registrar Pedido"></input> Resultado:<span id="resultado">0</span>
 						</form>
 						<div style="clear: both;">&nbsp;</div>
 					</div>

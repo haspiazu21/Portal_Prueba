@@ -80,37 +80,14 @@ if (isset($_POST["btn_solicitar"])) {
 
 	//print_r($datos_cab);
 	//$resultado_cab = insertar_pedido_cab($datos_cab, $result);
-	//$id_pedido_grabado = $resultado_cab;
+	$_SESSION['$pedido_grabado'] = $resultado_cab;
 
+	$id_pedido_grabado= $_SESSION['$pedido_grabado'];
 
 	/**************************************************************/
 	/********************DETALLE***********************************/
 
 
-var_dump($identificadores);
-
-
-	/* Detalle */
-	$ped_id_detalle = "NULL";
-	$ped_id_pedido = $id_pedido_grabado;
-	$ped_id_producto = 1;
-	$precio = 1.25;
-	$iva = 0.12;
-	$ped_cantidad_pedida = 2;
-	$ped_subtotal_pedido = $ped_cantidad_pedida * $precio;
-	$ped_total_pedido = $ped_subtotal_pedido * (1 + $iva);
-
-	$datos_det = array($ped_id_detalle,
-	$ped_id_pedido,
-	$ped_id_producto,
-	$ped_cantidad_pedida,
-	$ped_subtotal_pedido,
-	$ped_total_pedido,);
-
-	print_r($datos_det);
-
-	//insertar_pedido_det($datos_det, &$result);
-	//header("location: solpe_det.php");
 }
 
 
