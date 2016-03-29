@@ -22,6 +22,7 @@
 								<h2>Cabecera y Detalle de Solicitudes de Pedido</h2>
 								<?php include ("cabecera_pedido.php"); ?>
 								<?php include ("detalle_pedido.php"); ?>
+
 							</div>
 							<div style="clear: both;">&nbsp;</div>
 						</form>

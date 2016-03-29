@@ -1,5 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php
+$num_pedido=$_GET['num_pedido'];
+$n_usuario=$_GET['n_usuario'];
 
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <?php include ("header.php"); ?>
@@ -17,7 +21,7 @@
                 <div id="page-bgtop">
                     <div id="page-bgbtm">
                         <div id="content">
-						<h2>Condiciones del Pedido</h2>
+						<h2>Detalles para Pago del Pedido</h2>
                             <?php include ("pagos_detalle.php"); ?>
 							<div style="clear: both;">&nbsp;</div>
                         </div>

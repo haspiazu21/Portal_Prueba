@@ -119,9 +119,10 @@ function initChangeStatusDialog() {
     });
 }
 
-function realizaProceso(valorCaja1,valorCaja2,valorCaja3,valorCaja4,valorCaja5){
+function realizaProceso(boton,valorCaja1,valorCaja2,valorCaja3,valorCaja4,valorCaja5){
 	
 	var parametros = {
+			"btn_solicitar":boton,
             "pro_pedido_2" : valorCaja1,
             "pro_pedido_3" : valorCaja2,
             "pro_pedido_4" : valorCaja3,
@@ -139,5 +140,29 @@ function realizaProceso(valorCaja1,valorCaja2,valorCaja3,valorCaja4,valorCaja5){
                     $("#resultado").html(response);
             }
     });
+    
+   
+}
+
+function limpiarCajas(){
+	 $(":text").each(function(){
+	    	$($(this)).val('');
+	    	});
+	
+}
+
+function ocultaform(){
+	
+	$(document).ready(function(){
+		$("#mostrar").click(function(){
+			$('#target').show(3000);
+			$('.target').show("slow");
+		 });
+		$("#ocultar").click(function(){
+			$('#target').hide(3000);
+			$('.target').hide("fast");
+		 });
+	});
+	
 }
 

@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
 
 <?php include ("header.php");?>
 <body>
@@ -31,8 +30,8 @@
 						?>
 
 						<form id="form_solpedet" action="#" method="post">
-							<input name="btn_solicitar" type="button" href="javascript:;"
-								onclick="realizaProceso($('#pro_pedido_2').val(), $('#pro_pedido_3').val(), $('#pro_pedido_4').val(), $('#pro_pedido_5').val(), $('#pro_pedido_6').val());return false;"
+							<input name="btn_solicitar" id="btn_solicitar" type="button" href="javascript:;"
+								onclick="realizaProceso($('#btn_solicitar').val(),$('#pro_pedido_2').val(), $('#pro_pedido_3').val(), $('#pro_pedido_4').val(), $('#pro_pedido_5').val(), $('#pro_pedido_6').val());return false; limpiarCajas();"
 								value="Registrar Pedido"></input> Resultado:<span id="resultado">0</span>
 						</form>
 						<div style="clear: both;">&nbsp;</div>

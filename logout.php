@@ -9,4 +9,7 @@
 session_start();
 session_destroy();
 
+setcookie("n_usuario", "", time() - 3600);
+
 header('location: index.php');
+
